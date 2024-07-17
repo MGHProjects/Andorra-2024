@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Gloria+Hallelujah&family=Lemon&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Kalnia Glaze', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +16,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Countdowm */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Lemon', serif;
+  color: #FF0000;
+}
+
+.countdown-item {
+  margin: 0 0.5rem;
 }

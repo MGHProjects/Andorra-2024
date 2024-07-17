@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Countdown from './Components/Countdown/Countdown';
+import Menu from './Components/Menu/Menu';
+import Actividades from './Components/Actividades/Actividades';
+import GestionTickets from './Components/GestionTickets/GestionTickets';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Router>
+        <Menu />
+        <div className="container mx-auto p-4">
+          <Routes>
+            <Route path="/" element={<Countdown />} />
+            <Route path="/actividades" element={<Actividades />} />
+            <Route path="/gestion-tickets" element={<GestionTickets />} />
+          </Routes>
+        </div>
+      </Router>
+    </ChakraProvider>
   );
 }
 
